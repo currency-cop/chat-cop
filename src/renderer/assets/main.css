@@ -1,0 +1,29 @@
+.ui.tab.bottom {
+  height: calc(100% - 40px);
+  position: relative;
+  top: 40px;
+  overflow: auto;
+}
+
+.ui.tab.bottom > .ui.grid {
+  height: 100%;
+  margin: 0;
+}
+
+.dataTables_scrollHeadInner {
+  width: 100% !important;
+  padding-right: 0 !important;
+}
+
+table.ui.table.dataTable.no-footer {
+  width: 100% !important;
+  margin-bottom: 0 !important;
+}
+
+div.dataTables_wrapper {
+  margin-top: 25px;
+}
+
+[data-hidden] {
+  display: none;
+}
