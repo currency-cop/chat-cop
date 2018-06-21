@@ -1,6 +1,6 @@
 {
   "name": "chat-cop",
-  "productName": "Chat Cop",
+  "productName": "ChatCop",
   "version": "1.0.0",
   "description": "Your new chat assistant for Path of Exile",
   "main": "src/main/index.js",
@@ -12,49 +12,16 @@
     "lint": "echo \"No linting configured\""
   },
   "keywords": [],
-  "author": "John",
+  "author": "Nijiko Yonskai <nijikokun@gmail.com>",
   "license": "MIT",
   "config": {
-    "forge": {
-      "packagerConfig": {},
-      "makers": [
-        {
-          "name": "@electron-forge/maker-squirrel",
-          "platforms": [
-            "win32"
-          ],
-          "config": {
-            "name": "Chat Cop",
-            "iconUrl": "./resources/icon.png"
-          }
-        },
-        {
-          "name": "@electron-forge/maker-zip",
-          "platforms": [
-            "darwin"
-          ]
-        },
-        {
-          "name": "@electron-forge/maker-deb",
-          "platforms": [
-            "linux"
-          ],
-          "config": {}
-        },
-        {
-          "name": "@electron-forge/maker-rpm",
-          "platforms": [
-            "linux"
-          ],
-          "config": {}
-        }
-      ]
-    }
+    "forge": "./forge.config.js"
   },
   "dependencies": {
     "axios": "^0.18.0",
     "datatables.net-scroller-se": "^1.5.0",
     "datatables.net-se": "^1.10.18",
+    "electron-compile": "6.4.2",
     "electron-squirrel-startup": "^1.0.0",
     "electron-store": "^2.0.0",
     "moment": "^2.22.2",

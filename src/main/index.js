@@ -4,11 +4,6 @@ const Monitor = require('./monitor').default
 const Store = require('electron-store')
 const config = new Store()
 
-require('electron-reload')(path.join(__dirname, '..'), {
-  electron: path.join(__dirname, '..', '..', 'node_modules', '.bin/electron.cmd'),
-  hardResetMethod: 'exit'
-})
-
 if (require('electron-squirrel-startup')) { // eslint-disable-line global-require
   app.quit()
 }
@@ -47,7 +42,7 @@ app.on('ready', () => {
 
   mainWindow.setMenu(null)
   mainWindow.loadURL(`file://${__dirname}/../renderer/index.html`)
-  mainWindow.webContents.openDevTools()
+  // mainWindow.webContents.openDevTools()
 
   if (config.store.logFile) {
     registerChatMonitor()
